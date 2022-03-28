@@ -47,13 +47,13 @@ class DebounceableTextField: UITextField{
             print("textFieldId \(textFieldId)")
             switch textFieldId{
             case "idTextField":
-                self.signupTextFieldDelegate?.editedIdTextField(text: text)
+                self.signupTextFieldDelegate?.editedIdTextField(id: text)
             case "passwordTextField":
-                self.signupTextFieldDelegate?.editedPasswordTextField(text: text)
+                self.signupTextFieldDelegate?.editedPasswordTextField(password: text)
             case "passwordCheckTextField":
-                self.signupTextFieldDelegate?.editedPasswordCheckTextField(text: text)
+                self.signupTextFieldDelegate?.editedPasswordCheckTextField(passwordCheck: text)
             case "nameTextField":
-                self.signupTextFieldDelegate?.editedNameTextField(text: text)
+                self.signupTextFieldDelegate?.editedNameTextField(name: text)
             default: break
             }
         })

@@ -42,18 +42,18 @@ class SignupViewController: UIViewController {
 
 extension SignupViewController: SignupTextFieldDelegate{
     func editedPasswordTextField(password: String) {
-        signupManagable?.verifyPassword(string: password)
+        signupManagable?.verifyPassword(password: password)
     }
     
     func editedPasswordCheckTextField(passwordCheck: String) {
-        signupManagable?.verifyPasswordCheck(string: passwordCheck)
+        signupManagable?.verifyPasswordCheck(password: passwordCheck)
     }
     
     func editedNameTextField(name: String) {
-        
+        //이름이 변경됐을때 로직 = state에 저장해야함.
     }
     
     func editedIdTextField(id: String) {
-        signupManagable?.verifyid(string: id)
+        signupManagable?.verifyid(id: id)
     }
 }

@@ -11,6 +11,10 @@
 		7207BDE827F1B3A600BA32A9 /* SignupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207BDE727F1B3A600BA32A9 /* SignupManager.swift */; };
 		7207BDEA27F1B56B00BA32A9 /* NetworkModelUsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207BDE927F1B56B00BA32A9 /* NetworkModelUsable.swift */; };
 		72427A6D27F176B000BF7ABB /* SignupTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72427A6C27F176B000BF7ABB /* SignupTextFieldDelegate.swift */; };
+		724B493B27F1DD9B000F4307 /* RegularExpressionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B493A27F1DD9B000F4307 /* RegularExpressionCheck.swift */; };
+		724B493E27F1DFB2000F4307 /* SignupExpressionCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B493D27F1DFB2000F4307 /* SignupExpressionCheckable.swift */; };
+		724B494027F1EFB7000F4307 /* SignManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B493F27F1EFB7000F4307 /* SignManagable.swift */; };
+		724B494227F1F6D4000F4307 /* SignupNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B494127F1F6D4000F4307 /* SignupNetwork.swift */; };
 		72D1587827F141A300917AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587727F141A300917AA7 /* AppDelegate.swift */; };
 		72D1587A27F141A300917AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587927F141A300917AA7 /* SceneDelegate.swift */; };
 		72D1587C27F141A300917AA7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587B27F141A300917AA7 /* SignupViewController.swift */; };
@@ -49,6 +53,10 @@
 		7207BDE727F1B3A600BA32A9 /* SignupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupManager.swift; sourceTree = "<group>"; };
 		7207BDE927F1B56B00BA32A9 /* NetworkModelUsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelUsable.swift; sourceTree = "<group>"; };
 		72427A6C27F176B000BF7ABB /* SignupTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTextFieldDelegate.swift; sourceTree = "<group>"; };
+		724B493A27F1DD9B000F4307 /* RegularExpressionCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionCheck.swift; sourceTree = "<group>"; };
+		724B493D27F1DFB2000F4307 /* SignupExpressionCheckable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExpressionCheckable.swift; sourceTree = "<group>"; };
+		724B493F27F1EFB7000F4307 /* SignManagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManagable.swift; sourceTree = "<group>"; };
+		724B494127F1F6D4000F4307 /* SignupNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNetwork.swift; sourceTree = "<group>"; };
 		72D1587427F141A300917AA7 /* SignupApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignupApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D1587727F141A300917AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D1587927F141A300917AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,11 +110,15 @@
 			path = delegate;
 			sourceTree = "<group>";
 		};
-		72427A6B27F1740900BF7ABB /* delegate */ = {
+		724B493C27F1DF93000F4307 /* usecase */ = {
 			isa = PBXGroup;
 			children = (
+				7207BDE927F1B56B00BA32A9 /* NetworkModelUsable.swift */,
+				724B493A27F1DD9B000F4307 /* RegularExpressionCheck.swift */,
+				724B493D27F1DFB2000F4307 /* SignupExpressionCheckable.swift */,
+				724B494127F1F6D4000F4307 /* SignupNetwork.swift */,
 			);
-			path = delegate;
+			path = usecase;
 			sourceTree = "<group>";
 		};
 		72D1586B27F141A300917AA7 = {
@@ -132,6 +144,7 @@
 		72D1587627F141A300917AA7 /* SignupApp */ = {
 			isa = PBXGroup;
 			children = (
+				724B493C27F1DF93000F4307 /* usecase */,
 				72D158A727F151AD00917AA7 /* page */,
 				72D1587727F141A300917AA7 /* AppDelegate.swift */,
 				72D1587927F141A300917AA7 /* SceneDelegate.swift */,
@@ -163,29 +176,28 @@
 			isa = PBXGroup;
 			children = (
 				72D158B127F1577600917AA7 /* navigation */,
-				72D158AC27F1547200917AA7 /* signupView */,
+				72D158AC27F1547200917AA7 /* signup */,
 				72D158B227F1586D00917AA7 /* personalDataInput */,
 				7207BDE527F1ACA700BA32A9 /* DebounceableTextField.swift */,
 			);
 			path = page;
 			sourceTree = "<group>";
 		};
-		72D158AC27F1547200917AA7 /* signupView */ = {
+		72D158AC27F1547200917AA7 /* signup */ = {
 			isa = PBXGroup;
 			children = (
 				72427A6627F171B700BF7ABB /* delegate */,
 				72D1587B27F141A300917AA7 /* SignupViewController.swift */,
 				72D158AD27F154AD00917AA7 /* SignupStoryboard.storyboard */,
 				7207BDE727F1B3A600BA32A9 /* SignupManager.swift */,
-				7207BDE927F1B56B00BA32A9 /* NetworkModelUsable.swift */,
+				724B493F27F1EFB7000F4307 /* SignManagable.swift */,
 			);
-			path = signupView;
+			path = signup;
 			sourceTree = "<group>";
 		};
 		72D158B127F1577600917AA7 /* navigation */ = {
 			isa = PBXGroup;
 			children = (
-				72427A6B27F1740900BF7ABB /* delegate */,
 				72D158B527F15B0F00917AA7 /* protocol */,
 				72D1587D27F141A300917AA7 /* Main.storyboard */,
 				72D158A827F151BD00917AA7 /* NavigationController.swift */,
@@ -345,10 +357,14 @@
 			files = (
 				72D1587C27F141A300917AA7 /* SignupViewController.swift in Sources */,
 				72D158A927F151BD00917AA7 /* NavigationController.swift in Sources */,
+				724B493E27F1DFB2000F4307 /* SignupExpressionCheckable.swift in Sources */,
 				7207BDEA27F1B56B00BA32A9 /* NetworkModelUsable.swift in Sources */,
 				7207BDE827F1B3A600BA32A9 /* SignupManager.swift in Sources */,
+				724B493B27F1DD9B000F4307 /* RegularExpressionCheck.swift in Sources */,
+				724B494227F1F6D4000F4307 /* SignupNetwork.swift in Sources */,
 				7207BDE627F1ACA800BA32A9 /* DebounceableTextField.swift in Sources */,
 				72427A6D27F176B000BF7ABB /* SignupTextFieldDelegate.swift in Sources */,
+				724B494027F1EFB7000F4307 /* SignManagable.swift in Sources */,
 				72D158AB27F1533600917AA7 /* PersonalDataInputViewController.swift in Sources */,
 				72D1587827F141A300917AA7 /* AppDelegate.swift in Sources */,
 				72D1587A27F141A300917AA7 /* SceneDelegate.swift in Sources */,
