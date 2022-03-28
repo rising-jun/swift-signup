@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		72D1587827F141A300917AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587727F141A300917AA7 /* AppDelegate.swift */; };
 		72D1587A27F141A300917AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587927F141A300917AA7 /* SceneDelegate.swift */; };
-		72D1587C27F141A300917AA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587B27F141A300917AA7 /* ViewController.swift */; };
+		72D1587C27F141A300917AA7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587B27F141A300917AA7 /* SignupViewController.swift */; };
 		72D1587F27F141A300917AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D1587D27F141A300917AA7 /* Main.storyboard */; };
 		72D1588127F141A500917AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D1588027F141A500917AA7 /* Assets.xcassets */; };
 		72D1588427F141A500917AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D1588227F141A500917AA7 /* LaunchScreen.storyboard */; };
 		72D1588F27F141A500917AA7 /* SignupAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1588E27F141A500917AA7 /* SignupAppTests.swift */; };
 		72D1589927F141A500917AA7 /* SignupAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1589827F141A500917AA7 /* SignupAppUITests.swift */; };
 		72D1589B27F141A500917AA7 /* SignupAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1589A27F141A500917AA7 /* SignupAppUITestsLaunchTests.swift */; };
+		72D158A927F151BD00917AA7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D158A827F151BD00917AA7 /* NavigationController.swift */; };
+		72D158AB27F1533600917AA7 /* PersonalDataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D158AA27F1533600917AA7 /* PersonalDataInputViewController.swift */; };
+		72D158AE27F154AD00917AA7 /* SignupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D158AD27F154AD00917AA7 /* SignupStoryboard.storyboard */; };
+		72D158B027F1575800917AA7 /* NavigationPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D158AF27F1575800917AA7 /* NavigationPushable.swift */; };
+		72D158B427F1589000917AA7 /* PersonalDataInputStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D158B327F1589000917AA7 /* PersonalDataInputStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 		72D1587427F141A300917AA7 /* SignupApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignupApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D1587727F141A300917AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D1587927F141A300917AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72D1587B27F141A300917AA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72D1587B27F141A300917AA7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		72D1587E27F141A300917AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72D1588027F141A500917AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72D1588327F141A500917AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		72D1589427F141A500917AA7 /* SignupAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignupAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D1589827F141A500917AA7 /* SignupAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAppUITests.swift; sourceTree = "<group>"; };
 		72D1589A27F141A500917AA7 /* SignupAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		72D158A827F151BD00917AA7 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		72D158AA27F1533600917AA7 /* PersonalDataInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataInputViewController.swift; sourceTree = "<group>"; };
+		72D158AD27F154AD00917AA7 /* SignupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupStoryboard.storyboard; sourceTree = "<group>"; };
+		72D158AF27F1575800917AA7 /* NavigationPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPushable.swift; sourceTree = "<group>"; };
+		72D158B327F1589000917AA7 /* PersonalDataInputStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalDataInputStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,9 @@
 		72D1587627F141A300917AA7 /* SignupApp */ = {
 			isa = PBXGroup;
 			children = (
+				72D158A727F151AD00917AA7 /* page */,
 				72D1587727F141A300917AA7 /* AppDelegate.swift */,
 				72D1587927F141A300917AA7 /* SceneDelegate.swift */,
-				72D1587B27F141A300917AA7 /* ViewController.swift */,
-				72D1587D27F141A300917AA7 /* Main.storyboard */,
 				72D1588027F141A500917AA7 /* Assets.xcassets */,
 				72D1588227F141A500917AA7 /* LaunchScreen.storyboard */,
 				72D1588527F141A500917AA7 /* Info.plist */,
@@ -125,6 +134,52 @@
 				72D1589A27F141A500917AA7 /* SignupAppUITestsLaunchTests.swift */,
 			);
 			path = SignupAppUITests;
+			sourceTree = "<group>";
+		};
+		72D158A727F151AD00917AA7 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				72D158B127F1577600917AA7 /* navigation */,
+				72D158AC27F1547200917AA7 /* signupView */,
+				72D158B227F1586D00917AA7 /* personalDataInput */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
+		72D158AC27F1547200917AA7 /* signupView */ = {
+			isa = PBXGroup;
+			children = (
+				72D1587B27F141A300917AA7 /* SignupViewController.swift */,
+				72D158AD27F154AD00917AA7 /* SignupStoryboard.storyboard */,
+			);
+			path = signupView;
+			sourceTree = "<group>";
+		};
+		72D158B127F1577600917AA7 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				72D158B527F15B0F00917AA7 /* protocol */,
+				72D1587D27F141A300917AA7 /* Main.storyboard */,
+				72D158A827F151BD00917AA7 /* NavigationController.swift */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
+		72D158B227F1586D00917AA7 /* personalDataInput */ = {
+			isa = PBXGroup;
+			children = (
+				72D158AA27F1533600917AA7 /* PersonalDataInputViewController.swift */,
+				72D158B327F1589000917AA7 /* PersonalDataInputStoryboard.storyboard */,
+			);
+			path = personalDataInput;
+			sourceTree = "<group>";
+		};
+		72D158B527F15B0F00917AA7 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				72D158AF27F1575800917AA7 /* NavigationPushable.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D1588427F141A500917AA7 /* LaunchScreen.storyboard in Resources */,
+				72D158AE27F154AD00917AA7 /* SignupStoryboard.storyboard in Resources */,
+				72D158B427F1589000917AA7 /* PersonalDataInputStoryboard.storyboard in Resources */,
 				72D1588127F141A500917AA7 /* Assets.xcassets in Resources */,
 				72D1587F27F141A300917AA7 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72D1587C27F141A300917AA7 /* ViewController.swift in Sources */,
+				72D1587C27F141A300917AA7 /* SignupViewController.swift in Sources */,
+				72D158A927F151BD00917AA7 /* NavigationController.swift in Sources */,
+				72D158AB27F1533600917AA7 /* PersonalDataInputViewController.swift in Sources */,
 				72D1587827F141A300917AA7 /* AppDelegate.swift in Sources */,
 				72D1587A27F141A300917AA7 /* SceneDelegate.swift in Sources */,
+				72D158B027F1575800917AA7 /* NavigationPushable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
