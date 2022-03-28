@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7207BDE627F1ACA800BA32A9 /* DebounceableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207BDE527F1ACA700BA32A9 /* DebounceableTextField.swift */; };
+		7207BDE827F1B3A600BA32A9 /* SignupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207BDE727F1B3A600BA32A9 /* SignupManager.swift */; };
+		7207BDEA27F1B56B00BA32A9 /* NetworkModelUsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207BDE927F1B56B00BA32A9 /* NetworkModelUsable.swift */; };
+		72427A6D27F176B000BF7ABB /* SignupTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72427A6C27F176B000BF7ABB /* SignupTextFieldDelegate.swift */; };
 		72D1587827F141A300917AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587727F141A300917AA7 /* AppDelegate.swift */; };
 		72D1587A27F141A300917AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587927F141A300917AA7 /* SceneDelegate.swift */; };
 		72D1587C27F141A300917AA7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1587B27F141A300917AA7 /* SignupViewController.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7207BDE527F1ACA700BA32A9 /* DebounceableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceableTextField.swift; sourceTree = "<group>"; };
+		7207BDE727F1B3A600BA32A9 /* SignupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupManager.swift; sourceTree = "<group>"; };
+		7207BDE927F1B56B00BA32A9 /* NetworkModelUsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelUsable.swift; sourceTree = "<group>"; };
+		72427A6C27F176B000BF7ABB /* SignupTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTextFieldDelegate.swift; sourceTree = "<group>"; };
 		72D1587427F141A300917AA7 /* SignupApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignupApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D1587727F141A300917AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D1587927F141A300917AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72427A6627F171B700BF7ABB /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				72427A6C27F176B000BF7ABB /* SignupTextFieldDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		72427A6B27F1740900BF7ABB /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
 		72D1586B27F141A300917AA7 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +165,7 @@
 				72D158B127F1577600917AA7 /* navigation */,
 				72D158AC27F1547200917AA7 /* signupView */,
 				72D158B227F1586D00917AA7 /* personalDataInput */,
+				7207BDE527F1ACA700BA32A9 /* DebounceableTextField.swift */,
 			);
 			path = page;
 			sourceTree = "<group>";
@@ -149,8 +173,11 @@
 		72D158AC27F1547200917AA7 /* signupView */ = {
 			isa = PBXGroup;
 			children = (
+				72427A6627F171B700BF7ABB /* delegate */,
 				72D1587B27F141A300917AA7 /* SignupViewController.swift */,
 				72D158AD27F154AD00917AA7 /* SignupStoryboard.storyboard */,
+				7207BDE727F1B3A600BA32A9 /* SignupManager.swift */,
+				7207BDE927F1B56B00BA32A9 /* NetworkModelUsable.swift */,
 			);
 			path = signupView;
 			sourceTree = "<group>";
@@ -158,6 +185,7 @@
 		72D158B127F1577600917AA7 /* navigation */ = {
 			isa = PBXGroup;
 			children = (
+				72427A6B27F1740900BF7ABB /* delegate */,
 				72D158B527F15B0F00917AA7 /* protocol */,
 				72D1587D27F141A300917AA7 /* Main.storyboard */,
 				72D158A827F151BD00917AA7 /* NavigationController.swift */,
@@ -317,6 +345,10 @@
 			files = (
 				72D1587C27F141A300917AA7 /* SignupViewController.swift in Sources */,
 				72D158A927F151BD00917AA7 /* NavigationController.swift in Sources */,
+				7207BDEA27F1B56B00BA32A9 /* NetworkModelUsable.swift in Sources */,
+				7207BDE827F1B3A600BA32A9 /* SignupManager.swift in Sources */,
+				7207BDE627F1ACA800BA32A9 /* DebounceableTextField.swift in Sources */,
+				72427A6D27F176B000BF7ABB /* SignupTextFieldDelegate.swift in Sources */,
 				72D158AB27F1533600917AA7 /* PersonalDataInputViewController.swift in Sources */,
 				72D1587827F141A300917AA7 /* AppDelegate.swift in Sources */,
 				72D1587A27F141A300917AA7 /* SceneDelegate.swift in Sources */,

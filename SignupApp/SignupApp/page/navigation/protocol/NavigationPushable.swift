@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-protocol NavigationPushable: UINavigationController, SingupNavigationUsable{
+protocol NavigationPushable: UINavigationController, SignupNavigationUsable{
     
 }
 
-protocol SingupNavigationUsable{
+protocol SignupNavigationUsable{
     func pushPersonalDataInputViewController()
 }
