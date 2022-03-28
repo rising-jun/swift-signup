@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 class NavigationController: UINavigationController{
+
+    private lazy var regularExpressionCheck = RegularExpressionCheck()
+    private lazy var signupNetwork = SignupNetworkModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,7 @@ class NavigationController: UINavigationController{
         let signupStoryboard = UIStoryboard(name: "SignupStoryboard", bundle: nil)
         guard let signupViewController = signupStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as? SignupViewController else { return }
         signupViewController.setNavigationController(navigation: self)
+        signupViewController.setSignManagable(signupManagable: SignupManager(networkUsable: signupNetwork, regularExpressionCheckable: regularExpressionCheck))
         pushViewController(signupViewController, animated: true)
     }
     
