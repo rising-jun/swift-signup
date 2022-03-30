@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 class DebounceableTextField: UITextField{
-    private var signupTextFieldDelegate: SignupTextFieldDelegate?
+    private var inputableDelegate: InputableDelegate?
+    private var protocolType: Any.Type?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,8 +22,9 @@ class DebounceableTextField: UITextField{
         debounce(delay: 0.5)
     }
     
-    func setDelegate(signupTextFieldDelegate: SignupTextFieldDelegate?){
-        self.signupTextFieldDelegate = signupTextFieldDelegate
+    func setDelegate(inputableDelegate: InputableDelegate, protocolType: Any){
+        self.protocolType = protocolType as? Any.Type
+        self.inputableDelegate = inputableDelegate
     }
     
     deinit {
@@ -43,17 +45,26 @@ class DebounceableTextField: UITextField{
         let workItem = DispatchWorkItem(block: { [weak self] in
             guard let self = self else { return }
             guard let text = sender.text else { return }
-            guard let textFieldId = sender.restorationIdentifier else { return }
-            switch textFieldId{
-            case "idTextField":
-                self.signupTextFieldDelegate?.editedIdTextField(id: text)
-            case "passwordTextField":
-                self.signupTextFieldDelegate?.editedPasswordTextField(password: text)
-            case "passwordCheckTextField":
-                self.signupTextFieldDelegate?.editedPasswordCheckTextField(passwordCheck: text)
-            case "nameTextField":
-                self.signupTextFieldDelegate?.editedNameTextField(name: text)
-            default: break
+            
+            guard let protocolType = self.protocolType else { return }
+            if protocolType == IDInputable.self{
+                let inputableDelegate = self.inputableDelegate as? IDInputable
+                inputableDelegate?.editedIdTextField(id: text)
+            }
+            
+            if protocolType == PasswordInputable.self{
+                let inputableDelegate = self.inputableDelegate as? PasswordInputable
+                inputableDelegate?.editedPasswordTextField(password: text)
+            }
+            
+            if protocolType == PasswordCheckInputable.self{
+                let inputableDelegate = self.inputableDelegate as? PasswordCheckInputable
+                inputableDelegate?.editedPasswordCheckTextField(passwordCheck: text)
+            }
+            
+            if protocolType == NameInputable.self{
+                let inputableDelegate = self.inputableDelegate as? NameInputable
+                inputableDelegate?.editedNameTextField(name: text)
             }
         })
         self.workItem = workItem

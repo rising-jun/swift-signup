@@ -8,8 +8,32 @@
 import Foundation
 
 protocol SignupTextFieldDelegate{
+    //func editedIdTextField(id: String)
+    //func editedPasswordTextField(password: String)
+    //func editedPasswordCheckTextField(passwordCheck: String)
+    //func editedNameTextField(name: String)
+}
+
+protocol InputableDelegate{
+   
+}
+
+protocol IDInputable: InputableDelegate{
     func editedIdTextField(id: String)
+}
+
+protocol PasswordInputable: InputableDelegate{
     func editedPasswordTextField(password: String)
+}
+
+protocol PasswordCheckInputable: InputableDelegate{
     func editedPasswordCheckTextField(passwordCheck: String)
+}
+
+protocol NameInputable: InputableDelegate{
     func editedNameTextField(name: String)
+}
+
+protocol SignupInputDelegate: IDInputable, PasswordInputable, PasswordCheckInputable, NameInputable{
+    
 }

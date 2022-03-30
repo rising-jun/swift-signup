@@ -19,6 +19,7 @@ class SignupViewController: UIViewController {
     
     func setNavigationController(navigation: SignupNavigationUsable){
         self.navigation = navigation
+        navigation.pushPersonalDataInputViewController()
     }
     
     func setSignManagable(signupManagable: SignManagable){
@@ -32,15 +33,15 @@ class SignupViewController: UIViewController {
     }
     
     private func setTextfieldsDelegate(){
-        idTextField.setDelegate(signupTextFieldDelegate: self)
-        passwordTextField.setDelegate(signupTextFieldDelegate: self)
-        passwordCheckTextField.setDelegate(signupTextFieldDelegate: self)
-        nameTextField.setDelegate(signupTextFieldDelegate: self)
+        idTextField.setDelegate(inputableDelegate: self, protocolType: IDInputable.self)
+        passwordTextField.setDelegate(inputableDelegate: self, protocolType: PasswordInputable.self)
+        passwordCheckTextField.setDelegate(inputableDelegate: self, protocolType: PasswordCheckInputable.self)
+        nameTextField.setDelegate(inputableDelegate: self, protocolType: NameInputable.self)
     }
 }
 
 
-extension SignupViewController: SignupTextFieldDelegate{
+extension SignupViewController: SignupInputDelegate{
     func editedPasswordTextField(password: String) {
         signupManagable?.verifyPassword(password: password)
     }
