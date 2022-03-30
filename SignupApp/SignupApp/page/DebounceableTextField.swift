@@ -44,7 +44,6 @@ class DebounceableTextField: UITextField{
             guard let self = self else { return }
             guard let text = sender.text else { return }
             guard let textFieldId = sender.restorationIdentifier else { return }
-            print("textFieldId \(textFieldId)")
             switch textFieldId{
             case "idTextField":
                 self.signupTextFieldDelegate?.editedIdTextField(id: text)

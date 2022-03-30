@@ -22,7 +22,7 @@ class NavigationController: UINavigationController{
         let signupStoryboard = UIStoryboard(name: "SignupStoryboard", bundle: nil)
         guard let signupViewController = signupStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as? SignupViewController else { return }
         signupViewController.setNavigationController(navigation: self)
-        signupViewController.setSignManagable(signupManagable: SignupManager(networkUsable: signupNetwork, regularExpressionCheckable: regularExpressionCheck))
+        signupViewController.setSignManagable(signupManagable: SignupManager(networkUsable: signupNetwork, signupExpressionCheckable: regularExpressionCheck))
         pushViewController(signupViewController, animated: true)
     }
     
