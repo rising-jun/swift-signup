@@ -12,5 +12,5 @@ protocol NetworkModelUsable: SignupNetworkUsable{
 }
 
 protocol SignupNetworkUsable{
-    
+    func idDuplicateConfirm()
 }

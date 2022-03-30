@@ -12,5 +12,7 @@ class SignupNetworkModel{
 }
 
 extension SignupNetworkModel: NetworkModelUsable{
-    
+    func idDuplicateConfirm() {
+        
+    }
 }
