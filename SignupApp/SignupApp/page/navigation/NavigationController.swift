@@ -19,7 +19,7 @@ class NavigationController: UINavigationController{
     }
     
     private func presentSignupViewController(){
-        let signupStoryboard = UIStoryboard(name: "SignupStoryboard", bundle: nil)
+        let signupStoryboard = UIStoryboard(name: "SignupStoryboard", bundle: Bundle(for: SignupViewController.self))
         guard let signupViewController = signupStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as? SignupViewController else { return }
         signupViewController.setNavigationController(navigation: self)
         signupViewController.setSignManagable(signupManagable: SignupManager(networkUsable: signupNetwork, signupExpressionCheckable: regularExpressionCheck))
@@ -27,7 +27,7 @@ class NavigationController: UINavigationController{
     }
     
     private func presentPersonalDataInputViewController(){
-        let signupStoryboard = UIStoryboard(name: "PersonalDataInputStoryboard", bundle: nil)
+        let signupStoryboard = UIStoryboard(name: "PersonalDataInputStoryboard", bundle: Bundle(for: SignupViewController.self))
         guard let personalDataInputViewController = signupStoryboard.instantiateViewController(withIdentifier: "PersonalDataInputViewController") as? PersonalDataInputViewController else { return }
         pushViewController(personalDataInputViewController, animated: true)
     }
