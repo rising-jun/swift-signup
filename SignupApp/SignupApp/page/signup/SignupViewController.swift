@@ -9,7 +9,6 @@ import UIKit
 
 class SignupViewController: UIViewController {
     
-    private var navigation: SignupNavigationUsable?
     private var signupManagable: SignManagable?
     
     @IBOutlet weak var idTextField: DebounceableTextField!
@@ -17,23 +16,23 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordCheckTextField: DebounceableTextField!
     @IBOutlet weak var nameTextField: DebounceableTextField!
     
-    func setNavigationController(navigation: SignupNavigationUsable){
-        self.navigation = navigation
-        navigation.pushPersonalDataInputViewController()
+    func injectDependency(signupDependency: SignupDependencyUsable){
+        self.signupManagable = signupDependency.getManagable()
     }
     
-    func setSignManagable(signupManagable: SignManagable){
-        self.signupManagable = signupManagable
+    private func pullDependency(){
+        ComposeDependency.pull(viewController: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pullDependency()
         view.backgroundColor = .systemGray5
         setTextfieldsDelegate()
     }
     
     private func setTextfieldsDelegate(){
-        idTextField.setDelegate(inputableDelegate: self, protocolType: IDInputable.self)
+        idTextField.setDelegate(inputableDelegate: self as IDInputable, protocolType: IDInputable.self)
         passwordTextField.setDelegate(inputableDelegate: self, protocolType: PasswordInputable.self)
         passwordCheckTextField.setDelegate(inputableDelegate: self, protocolType: PasswordCheckInputable.self)
         nameTextField.setDelegate(inputableDelegate: self, protocolType: NameInputable.self)
@@ -51,7 +50,7 @@ extension SignupViewController: SignupInputDelegate{
     }
     
     func editedNameTextField(name: String) {
-        //이름이 변경됐을때 로직 = state에 저장해야함.
+        
     }
     
     func editedIdTextField(id: String) {

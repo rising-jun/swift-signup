@@ -9,9 +9,6 @@ import Foundation
 import UIKit
 
 class NavigationController: UINavigationController{
-
-    private lazy var regularExpressionCheck = RegularExpressionCheck()
-    private lazy var signupNetwork = SignupNetworkModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,21 +18,7 @@ class NavigationController: UINavigationController{
     private func presentSignupViewController(){
         let signupStoryboard = UIStoryboard(name: "SignupStoryboard", bundle: Bundle(for: SignupViewController.self))
         guard let signupViewController = signupStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as? SignupViewController else { return }
-        signupViewController.setNavigationController(navigation: self)
-        signupViewController.setSignManagable(signupManagable: SignupManager(networkUsable: signupNetwork, signupExpressionCheckable: regularExpressionCheck))
         pushViewController(signupViewController, animated: true)
     }
     
-    private func presentPersonalDataInputViewController(){
-        let signupStoryboard = UIStoryboard(name: "PersonalDataInputStoryboard", bundle: Bundle(for: SignupViewController.self))
-        guard let personalDataInputViewController = signupStoryboard.instantiateViewController(withIdentifier: "PersonalDataInputViewController") as? PersonalDataInputViewController else { return }
-        pushViewController(personalDataInputViewController, animated: true)
-    }
-    
-}
-
-extension NavigationController: NavigationPushable{
-    func pushPersonalDataInputViewController() {
-        presentPersonalDataInputViewController()
-    }
 }
