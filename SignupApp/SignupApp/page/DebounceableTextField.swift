@@ -14,12 +14,13 @@ class DebounceableTextField: UITextField{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        debounce(delay: 0.5)
+        self.addTarget(self, action: #selector(self.beginChange(_:)), for: .editingDidBegin)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        debounce(delay: 0.5)
+        self.addTarget(self, action: #selector(self.beginChange(_:)), for: .editingDidBegin)
+        
     }
     
     func setDelegate(inputableDelegate: InputableDelegate, protocolType: Any){
@@ -38,6 +39,11 @@ class DebounceableTextField: UITextField{
     func debounce(delay: Double) {
         self.delay = delay
         self.addTarget(self, action: #selector(self.editingChanged(_:)), for: .editingChanged)
+    }
+    
+    @objc private func beginChange(_ sender: UITextField){
+        self.removeTarget(self, action: #selector(self.beginChange(_:)), for: .editingDidBegin)
+        debounce(delay: 0.5)
     }
     
     @objc private func editingChanged(_ sender: UITextField) {
