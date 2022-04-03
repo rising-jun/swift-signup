@@ -29,6 +29,7 @@ class SignupViewController: UIViewController {
         pullDependency()
         view.backgroundColor = .systemGray5
         setTextfieldsDelegate()
+        signupManagable?.idDuplicateCheck(id: "jkhome")
     }
     
     private func setTextfieldsDelegate(){

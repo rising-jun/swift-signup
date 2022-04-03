@@ -24,9 +24,17 @@ class SignupManager{
     private func verifyUsablePassword(password: String){
        regularExpressionCheck.verifyUsablePassword(password: password)
     }
+    
+    private func duplicateCheck(in id: String){
+        signupNetworkUsable.idDuplicateConfirm(id: id)
+    }
 }
 
 extension SignupManager: SignManagable{
+    func idDuplicateCheck(id: String) {
+        duplicateCheck(in: id)
+    }
+    
     func isNilName(name: String) {
         
     }

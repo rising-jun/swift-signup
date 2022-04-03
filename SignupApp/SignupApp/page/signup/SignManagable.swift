@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SignManagable: SignVerifyable, SignNameInputable{
+protocol SignManagable: SignVerifyable, SignNameInputable, IDDuplicateCheckable{
     
 }
 
@@ -19,4 +19,8 @@ protocol SignVerifyable{
 
 protocol SignNameInputable{
     func isNilName(name: String)
+}
+
+protocol IDDuplicateCheckable{
+    func idDuplicateCheck(id: String)
 }
